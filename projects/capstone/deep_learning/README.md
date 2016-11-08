@@ -15,6 +15,9 @@ The code has the following prerequisites:
 * matplotlib
 * seaborn
 * h5py
+* PIL
+* pandas_ml
+* sklearn
 
 ## Dataset
 

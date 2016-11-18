@@ -41,8 +41,9 @@ This project is run under Amazon Web Services (AWS) platform for computational m
 This [Amazon Machine Image (AMI)](https://aws.amazon.com/marketplace/pp/B01EYKBEQ0) is used for developing the project code in Jupyter notebook.
 The AMI comes with TensorFlow and other relevant packages pre-installed.
 
-For instructions on setting up an Amazon EC2 Instance to run, you may find it [here] (https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/).
-Instructions on connecting to the EC2 Instance are found [here] (http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html)
+If you are new to AWS, you may find the [instructions on setting up an Amazon EC2 Instance](https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/) to run from the link. 
+Also, you may find the link of [instructions on connecting to the EC2 Instance](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AccessingInstances.html).
+
 Then connect to the EC2 Instance and in the terminal window, launch Jupyter notebook:
 
 `jupyter notebook`
@@ -53,18 +54,23 @@ And open your internet browser and navigate to the Public IP of the Instance, fo
 
 Else, if running in a local machine, then open your command window or terminal and execute the code files below:
 
+
 `jupyter notebook 3_preprocess_multi.ipynb`
+
 `jupyter notebook 4_model_multi.ipynb`
 
 To load TensorBoard, in your command window or terminal:
+
 The general command line format is as follows:
+
 `tensorboard --logdir=\path_to_event_files`
 
-For example, to run TensorBoard, type 
+For example, to run TensorBoard, type:
+
 `tensorboard --logdir=\home\ubuntu\model`
-Then, launch TensorBoard by navigating to your internet browser and type 
+
+Then, launch TensorBoard by navigating to your internet browser and type:
+
 `{Private IP Address}:6006`
 
-
-
-
+Port 6006 is typically used. Note: certain AMI will point to the Public IP instead of Private IP for TensorBoard.
